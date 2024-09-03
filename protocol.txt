@@ -1,0 +1,18 @@
+Used commands:
+
+#(re) creates database
+sqlite3 horoscopes.db < horoscopes.sql
+
+#to run script daily at 7 AM:
+crontab -e
+#then write into the file this line
+0 7 * * * /usr/bin/python3 /home/z/zubcak2/project/crawler.py
+
+Task0:
+    web crawler that downloads horoscopes every day
+
+TaskA:
+    guess the most probable horoscope database size (on their webpage)
+
+
+Python scrip crawler.py loads horoscopes from diva.sk/horoskopy/denny-horoskop and saves them into horoscopes.db database
